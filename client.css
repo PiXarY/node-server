@@ -1,0 +1,35 @@
+body{
+    background-color: #343434;
+    -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+p{
+    font-size: large;
+    color:white;
+    left:50%;
+    bottom:1%;
+    position:absolute;
+    transform: translate(-50%);
+    color:blue;
+}
+.common{
+    left:50%;
+    position: absolute;
+    transform: translate(-50%);
+    height:30px;
+    color:white;
+    background-color:black;
+}
+#sendMsg{
+    top:8%;
+    border:0.1px white;
+}
+#sendMsg:hover{
+    background-color:rgb(26, 25, 25);
+}
+#sendMsg:active{
+    background-color:rgb(41, 38, 38);
+}
+#chat{
+    color:white;
+    font-size: 25px;
+}
