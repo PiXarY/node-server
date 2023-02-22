@@ -1,4 +1,5 @@
 const WebSocket = require('ws');
+const os = require('os');
 
 const wss = new WebSocket.Server({ port: 8000 });
 
@@ -23,3 +24,11 @@ wss.on('connection', function connection(ws) {
     console.log('Client disconnected');
   });
 });
+
+const serverIp = Object.values(os.networkInterfaces())
+  .flat()
+  .filter(({ family, internal }) => family === 'IPv4' && !internal)
+  .map(({ address }) => address)
+  .find(Boolean);
+
+console.log(`WebSocket server running at ws://${serverIp}:8000`);
